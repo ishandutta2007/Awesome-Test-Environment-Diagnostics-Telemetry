@@ -1,198 +1,107 @@
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Test Environment Diagnostics and Telemetry Banner" width="100%" />
+</p>
+
 # 🧪 Awesome Test Environment Diagnostics & Telemetry 📊 🚀
 
 <p align="center">
-  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
-  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome List" /></a>
   <a href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0-1.0" /></a>
   <a href="https://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a>
-  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=flat-square" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
-> 🌟 A curated directory and architecture guide for **Test Environment Diagnostics**, **Continuous Testing Telemetry**, **Synthetic Monitoring**, and **Test Observability** platforms — comparing enterprise SaaS monitoring suites, distributed tracing backends, and open-source TestOps tools for debugging test execution environments, isolating flaky tests, and accelerating CI/CD pipelines.  
+> 🌟 A curated architectural directory and guide to top **Test Environment Diagnostics**, **Continuous Testing Telemetry**, **Synthetic Monitoring**, and **Test Observability** platforms — featuring enterprise SaaS monitoring solutions, distributed trace correlation engines, and open-source TestOps backends for diagnosing test suite execution, isolating flaky tests, monitoring test runners, and accelerating CI/CD pipelines.  
 > 
 > ⭐ *Star this repository if you find it helpful!* ⭐
 
 ---
 
-## 🔍 Why Test Environment Diagnostics & Telemetry?
+## 📋 Table of Contents 📑
 
-As continuous integration, automated test suites, and microservices grow in complexity, diagnosing test flakiness and execution failures requires more than basic assertion logs or runner exit codes. Modern QA, DevOps, and Site Reliability Engineers (SRE) leverage **test telemetry**, **distributed tracing**, and **test environment diagnostics** to:
-- **Trace Test Execution Lifecycles:** Connect UI/API test runs down to backend HTTP requests, database queries, and microservice spans.
-- **Isolate Root Causes (Bug vs. Infra):** Disambiguate true code regressions from test runner starvation, DNS latency, network transit glitches, or environment instability.
-- **Analyze Runner Queue & Latency Bottlenecks:** Detect queue wait duration, CPU credit exhaustion, and runner concurrency limits before they slow down developer delivery velocity.
-- **Correlate Synthetic Probes with APM Traces:** Automatically link synthetic health checks and Playwright/Selenium sessions with backend APM traces for automated root-cause analysis (RCA).
-- **Standardize with OpenTelemetry (OTel):** Stream vendor-neutral traces, metrics, and test execution events into modern observability backends.
-
----
-
-## 📋 Table of Contents
-
-- [🌐 Market Overview & Diagnostic Architecture](#-market-overview--diagnostic-architecture)
-- [☁️ SaaS / Hosted Platforms](#️-saas--hosted-platforms)
-  - [BrowserStack Test Observability & Telemetry](#browserstack-test-observability--telemetry)
-  - [Datadog Synthetic Monitoring & APM](#datadog-synthetic-monitoring--apm)
-  - [New Relic Synthetics](#new-relic-synthetics)
-  - [Dynatrace Synthetic Monitoring](#dynatrace-synthetic-monitoring)
-  - [Sentry Performance](#sentry-performance)
-  - [Catchpoint](#catchpoint)
-  - [ThousandEyes](#thousandeyes)
-  - [SpeedCurve](#speedcurve)
-- [💻 Open-Source Software](#-open-source-software)
-  - [OpenObserve](#openobserve)
-  - [Upright](#upright)
-  - [Jaeger](#jaeger)
-  - [Grafana Tempo](#grafana-tempo)
-  - [OpenTelemetry](#opentelemetry)
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS & Hosted Commercial Platforms](#️-saas--hosted-commercial-platforms)
+- [💻 Open-Source Software & Test Diagnostics Engines](#-open-source-software--test-diagnostics-engines)
 - [📊 Feature Comparison Matrix](#-feature-comparison-matrix)
 - [🎯 Key Diagnostics & Observability Capabilities](#-key-diagnostics--observability-capabilities)
-- [📈 Star History](#-star-history)
 - [💖 Support & Community](#-support--community)
+- [📈 Star History](#-star-history)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
 ---
 
-## 🌐 Market Overview & Diagnostic Architecture
+## 🌐 Sector Overview & Market Dynamics 📈
 
-The modern software quality engineering landscape has shifted from post-hoc test reporting to proactive **Test Observability and Diagnostics**. Modern test pipelines implement continuous telemetry collection across three key architectural tiers:
+The global **test environment management, synthetic monitoring, and application observability market** is valued at approximately **$24 Billion to $32 Billion**, projected to expand at an estimated **14% to 18% CAGR** toward **$70B+ by the early 2030s** as distributed microservices, ephemeral CI/CD runners, and complex browser automation demand continuous telemetry.
 
-```text
-┌────────────────────────────────────────────────────────────────────────┐
-│                   1. Test Execution & Instrumentation                  │
-│       (Selenium 4, Playwright, Cypress, Jest, PyTest, K6)              │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │ OpenTelemetry Spans, HAR Logs, Vitals
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│             2. Diagnostic Ingestion & Trace Correlation                │
-│    - Session Telemetry & Network Path Analysis (BrowserStack, Catchpoint)│
-│    - Synthetic-to-APM Correlation (Datadog, Dynatrace, New Relic)      │
-│    - Open Distributed Tracing Backends (Jaeger, Tempo, OpenObserve)    │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │ Root Cause Analysis & Metrics
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│               3. Actionable Insights & Bottleneck Triage               │
-│     - Runner Queue Wait vs. Execution Time Analysis                    │
-│     - Microservice Dependency Latency & Flaky Spec Quarantine         │
-└────────────────────────────────────────────────────────────────────────┘
-```
+The sector exhibits **moderate fragmentation**: comprehensive infrastructure and APM giants (such as Cisco ThousandEyes, Datadog, Dynatrace, and New Relic) dominate enterprise-wide trace correlation and synthetic uptime monitoring, while specialized test execution infrastructure platforms (such as BrowserStack) and niche pre-production digital experience suites (Catchpoint, SpeedCurve, Sentry) capture dedicated test workflow budgets, complemented by an active open-source ecosystem centered on OpenTelemetry, Jaeger, SigNoz, and OpenObserve for privacy-first, self-hosted environments.
 
 ---
 
-## 🟦 SaaS / Hosted Platforms
+## ☁️ SaaS & Hosted Commercial Platforms 🏢
 
-Commercial, cloud-hosted Test Environment Diagnostics and Telemetry platforms designed for enterprise synthetic monitoring, test session debugging, and APM trace correlation.
+Commercial cloud-hosted test analytics, environment diagnostics, and synthetic monitoring platforms. The table below is sorted in descending order of vendor scale (company valuation / enterprise revenue).
 
-### BrowserStack Test Observability & Telemetry
-- **Type:** Test session telemetry with Jaeger integration
-- **Primary Use Case:** Selenium 4 session tracing & automated debugging
-- **Overview:** BrowserStack captures Selenium 4 telemetry logs for test sessions, providing distributed tracing visibility into request lifecycles and event logs. The `telemetryLogs` capability enables this in Selenium 4.0.0-alpha-6+ sessions, and the resulting logs can be downloaded via API (`/sessions/<id>/telemetrylogs`) and visualized in **Jaeger** for request trace analysis. The platform also consolidates session-level diagnostics including console logs, network HAR logs, Appium logs, Selenium logs, video recordings, and framework logs into a single API response for programmatic debugging.
-- **Best for:** QA engineering teams running Selenium 4 and Appium tests wanting distributed tracing of test sessions with Jaeger visualization to diagnose environment or network failures.
-
-### Datadog Synthetic Monitoring & APM
-- **Type:** Synthetic testing with APM trace correlation
-- **Primary Use Case:** Frontend-to-backend distributed trace correlation
-- **Overview:** Datadog Synthetics runs browser, HTTP, and network availability checks from managed or private locations. With **Synthetic APM**, when a synthetic test hits an instrumented HTTP server, Datadog automatically links the test execution result directly to the backend APM trace generated by that request. Correlates frontend UI failures with backend microservice traces, system logs, and infrastructure metrics. Private locations can be deployed via Kubernetes or Windows MSI.
-- **Diagnostic Insight:** Queue wait times can dominate execution duration in synthetic suites; measuring external queue wait prevents misdiagnosing capacity issues as test script failures.
-- **Best for:** Teams already running Datadog APM wanting synthetic tests linked to backend distributed traces with flexible private runner deployments.
-
-### New Relic Synthetics
-- **Type:** Scripted browser and API synthetic monitoring
-- **Primary Use Case:** Synthetic monitor execution & runner queue diagnostics
-- **Overview:** New Relic Synthetics runs scripted browser monitors and API checks from public or private locations. Exposes granular diagnostics through `SyntheticCheck` events including `nr.internalQueueDuration` and `nr.externalQueueDuration`.
-- **Diagnostic Insight:** Queue wait rises asymptotically under high utilization; isolating queue wait from actual execution duration enables proper runner capacity planning (targeting 40–55% utilization rather than saturating runners).
-- **Best for:** Engineering teams running scripted browser checks needing granular queue diagnostics and private location capacity monitoring.
-
-### Dynatrace Synthetic Monitoring
-- **Type:** Browser, HTTP, and network synthetic checks
-- **Primary Use Case:** End-to-end digital experience monitoring and waterfall diagnostics
-- **Overview:** Dynatrace Synthetic Monitoring provides browser monitors (full page load or interactive user flow), HTTP checks, and network availability checks (ICMP, TCP, DNS). Includes device emulation, bandwidth throttling, latency injection, and customizable run frequencies (5 mins to 4 hours). Diagnostic outputs feature Largest Contentful Paint (LCP), interactive request waterfalls with per-resource connection/download timings, and automated performance findings.
-- **Best for:** Enterprises needing synthetic monitoring integrated with full-stack digital experience monitoring (DEM) and detailed network waterfalls.
-
-### Sentry Performance
-- **Type:** Application performance monitoring with Jest test integration
-- **Primary Use Case:** Test execution profiling & slow test suite identification
-- **Overview:** Sentry provides performance monitoring with a dedicated Jest environment (`@sentry/jest-environment`) that instruments test suites to surface the slowest and most resource-intensive tests. Integrates DSN, branch/commit tags, and trace sampling directly into the test execution lifecycle.
-- **Best for:** JavaScript/TypeScript teams looking to surface test bottlenecks and diagnose slow test suites within existing Sentry dashboards.
-
-### Catchpoint
-- **Type:** Digital experience monitoring with synthetic testing + RUM
-- **Primary Use Case:** Pre-production test environment diagnostics & network path visibility
-- **Overview:** Catchpoint combines synthetic monitoring and real user monitoring (RUM) across application, network, and infrastructure layers with 600+ global vantage points. Emphasizes pre-production diagnostics by continuously running synthetic checks across QA and staging environments to catch performance regressions, API drift, and network anomalies prior to production deployment.
-- **Best for:** Development and DevOps teams needing pre-production synthetic diagnostics with deep BGP/DNS/network-layer visibility.
-
-### ThousandEyes
-- **Type:** Internet and network path intelligence
-- **Primary Use Case:** Multi-region test environment network connectivity diagnostics
-- **Overview:** Cisco ThousandEyes provides hop-by-hop network path visualization through Enterprise and Endpoint Agents deployed via Docker or dedicated hardware. Correlates underlying ISP/cloud routing performance with test execution reliability, isolating whether a failed test run is due to test code or external network transit issues.
-- **Best for:** Teams troubleshooting network latency, DNS anomalies, and transit degradation across distributed cloud test environments.
-
-### SpeedCurve
-- **Type:** Front-end synthetic performance benchmarking
-- **Primary Use Case:** Controlled front-end regression testing and speed metrics
-- **Overview:** SpeedCurve Synthetic runs automated web performance audits from standardized Amazon EC2 instances with clean caches and throttled connections to isolate code changes from environmental fluctuations. Tracks Core Web Vitals (LCP, CLS, INP) over time to catch UI regressions in staging pipelines.
-- **Best for:** Web teams requiring consistent, noise-free synthetic front-end performance benchmarks across build cycles.
+| 🏢 Platform | 💰 Scale (Valuation / Revenue) | 🏷️ Starting Tier Price | 🎁 Free Tier Limit / Free Trial | 🔍 Key Capabilities | 🎯 Best For |
+|---|---|---|---|---|---|
+| **[Cisco ThousandEyes](https://www.thousandeyes.com/)** | **~$200B+ Cisco Market Cap** (~$55B ARR; acquired for ~$1B) | **~$1,200 / year** (Cloud & Enterprise Agent unit capacity pack) | **15-Day Free Trial** (includes full access to Enterprise & Cloud Agents with 100 test runs) | Network path BGP/DNS hop-by-hop diagnostics, internet outage correlation, Endpoint Agent telemetry | Diagnosing network transit, ISP latency, and routing failures across multi-region test environments |
+| **[Datadog Synthetic Monitoring & APM](https://www.datadoghq.com/product/synthetic-monitoring/)** | **~$48.5B Market Cap** (~$2.6B ARR) | **$5.00 / 10,000 API test runs / month** ($12.00 / 1,000 browser test runs / month) | **14-Day Free Trial** (unrestricted access to managed & private synthetic locations, APM trace linking) | Synthetic APM trace correlation, queue wait diagnostics, private location runner via K8s/MSI | Correlating frontend synthetic test runs with backend microservice distributed traces |
+| **[Dynatrace Synthetic Monitoring](https://www.dynatrace.com/platform/synthetic-monitoring/)** | **~$15.2B Market Cap** (~$1.4B ARR) | **$0.001 per synthetic action** (~$10.00 / 10,000 synthetic runs on Dynatrace Platform Subscription) | **15-Day Free Trial** (includes full Davis AI engine, synthetic browser runs, and trace waterfalls) | Resource waterfall diagnostics, Largest Contentful Paint (LCP) analysis, latency injection | Enterprise synthetic monitoring integrated with full-stack digital experience monitoring (DEM) |
+| **[New Relic Synthetics](https://newrelic.com/platform/synthetic-monitoring)** | **~$6.5B Valuation** (~$1.0B ARR; Francisco Partners / TPG) | **$0.30 / GB ingested telemetry** (after free 100 GB; full platform user from $49/user/month) | **Free Forever Tier**: 100 GB data ingestion/month + 10,000 synthetic checks/month free | `SyntheticCheck` event diagnostics, `nr.internalQueueDuration` vs `nr.externalQueueDuration` metrics | Scripted browser monitors requiring granular queue wait diagnostics and capacity sizing |
+| **[BrowserStack Test Observability & Telemetry](https://www.browserstack.com/test-observability)** | **~$4.0B Valuation** (~$230M ARR) | **$39.00 / parallel test session / month** (billed annually; automated testing tier) | **Free Forever Tier**: 100 mins automated tests + 14-day free trial on all premium diagnostic features | Selenium 4 session telemetry extraction, Jaeger trace export, HAR/console/video log consolidation | Selenium 4 & Appium test session distributed tracing with Jaeger visualization |
+| **[Sentry Performance](https://sentry.io/for/performance/)** | **~$3.0B Valuation** (~$120M ARR) | **$26.00 / month** (Team tier, billed annually; $29/mo month-to-month) | **Free Forever Tier (Developer)**: 5,000 errors + 10,000 performance units/month + 1 GB attachments | `@sentry/jest-environment` test suite profiling, transaction tracing, slow test discovery | Identifying slow Jest/Node.js automated test suites within existing developer error workflows |
+| **[Catchpoint](https://www.catchpoint.com/)** | **~$350M–$500M Valuation** (~$75M ARR) | **~$1,500 / month** (Starter synthetic testing package with enterprise nodes) | **14-Day Free Trial** (includes access to 600+ global monitoring nodes and 16 monitor probe types) | Pre-production synthetic testing, BGP routing inspection, transaction verification, DNS waterfalls | Pre-production staging environment testing with deep internet and network path intelligence |
+| **[SpeedCurve](https://www.speedcurve.com/)** | **~$30M–$50M Valuation** (~$8M ARR) | **$100.00 / month** (Synthetic tier for 120,000 checks/year or 10,000 checks/month) | **30-Day Free Trial** (includes 3,000 synthetic test runs across global AWS EC2 test locations) | Controlled EC2 runner consistency, clean cache benchmarking, Core Web Vitals (LCP, CLS, INP) | Controlled front-end speed regression detection and standardized baseline benchmarking |
 
 ---
 
-## 🟩 Open-Source Software
+## 💻 Open-Source Software & Test Diagnostics Engines 🛠️
 
-Self-hosted, community-driven platforms for test observability, synthetic test execution, and distributed trace storage.
+Self-hosted, community-driven platforms for test observability, synthetic test execution, and distributed trace analysis. Sorted in descending order of official GitHub star counts.
 
-### OpenObserve
-- **Stack:** Rust / S3-compatible storage / Docker | **License:** AGPL-3.0
-- **Primary Use Case:** Unified logs, metrics, traces, and RUM storage
-- **Overview:** OpenObserve is a cloud-native, high-performance observability platform built in Rust. It natively ingests OpenTelemetry (OTLP) data, SQL, and PromQL queries, and operates at significantly lower storage costs compared to traditional Elasticsearch clusters. Test environments can push execution logs, spans, and metrics directly via OTLP into OpenObserve for unified dashboards and automated alerts.
-- **Best for:** Teams seeking a cost-efficient, self-hosted observability backend for aggregating test suite logs and traces.
-
-### Upright
-- **Stack:** Ruby on Rails / Playwright / Prometheus / Docker | **License:** Open Source
-- **Primary Use Case:** Self-hosted synthetic monitoring with browser automation
-- **Overview:** Upright (created by 37signals / Basecamp) is a lightweight synthetic monitoring engine driven by **Playwright** for browser probes, HTTP endpoints, and SMTP checks. Features automated scheduling via Solid Queue, multi-location deployment support, and native Prometheus metrics export for integration with Alertmanager and Grafana.
-- **Best for:** Teams wanting an open-source, Playwright-powered synthetic monitoring tool without third-party vendor lock-in.
-
-### Jaeger
-- **Stack:** Go / Badger / Elasticsearch / Cassandra | **License:** Apache 2.0
-- **Primary Use Case:** Distributed trace visualization for test sessions
-- **Overview:** Jaeger is a CNCF graduated distributed tracing platform. It serves as the primary trace visualization UI for BrowserStack Selenium 4 telemetry archives (`jaeger-query`) as well as custom OpenTelemetry spans captured during test runs. Visualizes span durations, microservice dependencies, and execution lifecycles.
-- **Best for:** Visualizing Selenium, Playwright, or microservice test traces to uncover timing delays and test session failures.
-
-### Grafana Tempo
-- **Stack:** Go / Object Storage (S3, GCS, MinIO) | **License:** AGPL-3.0
-- **Primary Use Case:** High-volume, cost-effective distributed trace storage
-- **Overview:** Grafana Tempo is an open-source, massively scalable distributed tracing backend. Designed to store traces directly in cost-effective object storage without indexing payloads, Tempo integrates seamlessly with Grafana, Loki (logs), and Prometheus (metrics) for end-to-end trace correlation.
-- **Best for:** Organizations with existing Grafana stacks wanting an open-source trace backend for high-volume test run telemetry.
-
-### OpenTelemetry
-- **Stack:** Multi-Language SDKs / OpenTelemetry Collector | **License:** Apache 2.0
-- **Primary Use Case:** Vendor-neutral instrumentation standard for traces, metrics, and logs
-- **Overview:** OpenTelemetry (OTel) is the vendor-neutral standard for instrumenting, generating, and exporting telemetry data. In test environments, OTel SDKs instrument test frameworks (Selenium, Playwright, Cypress, Jest, PyTest) and backend services. The OpenTelemetry Collector receives and forwards this test telemetry to backends like Jaeger, Tempo, OpenObserve, Datadog, or New Relic.
-- **Best for:** Modern teams seeking open, future-proof instrumentation that decouples test pipelines from any single monitoring vendor.
+| 📦 Open-Source Project | ⭐ GitHub Stars | 🛠️ Technology Stack | 📜 License | 🔍 Key Diagnostic Capabilities | 🎯 Best For |
+|---|---|---|---|---|---|
+| **[SigNoz](https://github.com/signoz/signoz)** | [![Repo Stars](https://img.shields.io/github/stars/signoz/signoz?style=social&color=white)](https://github.com/signoz/signoz/stargazers) | Go, TypeScript, ClickHouse, OTel | Apache 2.0 | Native OpenTelemetry APM, ClickHouse-backed trace aggregation, service dependency maps | Self-hosted full-stack APM & test trace correlation with fast ClickHouse analytics |
+| **[Jaeger](https://github.com/jaegertracing/jaeger)** | [![Repo Stars](https://img.shields.io/github/stars/jaegertracing/jaeger?style=social&color=white)](https://github.com/jaegertracing/jaeger/stargazers) | Go, Cassandra, Elasticsearch, Badger | Apache 2.0 | CNCF Graduated tracing backend, span lifecycle DAGs, BrowserStack Selenium 4 telemetry import | Visualizing Selenium 4 session traces and microservice spans in a proven UI |
+| **[OpenObserve](https://github.com/openobserve/openobserve)** | [![Repo Stars](https://img.shields.io/github/stars/openobserve/openobserve?style=social&color=white)](https://github.com/openobserve/openobserve/stargazers) | Rust, S3/MinIO, Vue, OTel | AGPL-3.0 | 140x lower storage cost than Elasticsearch, native OTLP ingestion, SQL/PromQL querying | Low-cost, high-retention self-hosted logs and trace analytics for test environments |
+| **[Highlight](https://github.com/highlight/highlight)** | [![Repo Stars](https://img.shields.io/github/stars/highlight/highlight?style=social&color=white)](https://github.com/highlight/highlight/stargazers) | Go, TypeScript, ClickHouse, Docker | Apache 2.0 | Session replay with full frontend error telemetry, network request watermarking, trace linking | Debugging browser automation and end-to-end user journey test runs with session replay |
+| **[OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector)** | [![Repo Stars](https://img.shields.io/github/stars/open-telemetry/opentelemetry-collector?style=social&color=white)](https://github.com/open-telemetry/opentelemetry-collector/stargazers) | Go, OTel Core | Apache 2.0 | Vendor-neutral proxy, telemetry batching, span filtering, routing to Jaeger/Tempo/OpenObserve | Ingesting and routing test execution spans and runner metrics across heterogeneous backends |
+| **[Grafana Tempo](https://github.com/grafana/tempo)** | [![Repo Stars](https://img.shields.io/github/stars/grafana/tempo?style=social&color=white)](https://github.com/grafana/tempo/stargazers) | Go, Object Storage (S3, GCS, Azure) | AGPL-3.0 | Massively scalable trace storage without indexing, native Grafana/Loki/Prometheus integration | Storing high-volume test run traces cost-effectively in S3-compatible storage |
+| **[Uptrace](https://github.com/uptrace/uptrace)** | [![Repo Stars](https://img.shields.io/github/stars/uptrace/uptrace?style=social&color=white)](https://github.com/uptrace/uptrace/stargazers) | Go, PostgreSQL, ClickHouse, Vue | BSL 1.1 / Apache 2.0 | OpenTelemetry APM, automated anomaly detection, trace aggregation, SQL query tracing | Teams wanting a clean, lightweight OpenTelemetry APM for CI/CD environments |
+| **[Tracetest](https://github.com/kubeshop/tracetest)** | [![Repo Stars](https://img.shields.io/github/stars/kubeshop/tracetest?style=social&color=white)](https://github.com/kubeshop/tracetest/stargazers) | Go, TypeScript, OpenTelemetry | MIT | Trace-based testing: assertion against OpenTelemetry distributed traces and span metadata | Validating microservice behavior and test environment assertions using trace data |
+| **[Upright](https://github.com/basecamp/upright)** | [![Repo Stars](https://img.shields.io/github/stars/basecamp/upright?style=social&color=white)](https://github.com/basecamp/upright/stargazers) | Ruby on Rails, Playwright, Prometheus | Open Source | Playwright browser synthetic probes, HTTP checks, Solid Queue scheduling, Prometheus export | Lightweight, self-hosted synthetic browser checks using modern Playwright scripts |
+| **[Hypertrace](https://github.com/hypertrace/hypertrace)** | [![Repo Stars](https://img.shields.io/github/stars/hypertrace/hypertrace?style=social&color=white)](https://github.com/hypertrace/hypertrace/stargazers) | Java, Go, Pinot, Kafka | Apache 2.0 | Distributed trace ingestion, service flow graph visualization, latency diagnostics | Enterprise-grade distributed tracing and observability for complex microservice testbeds |
 
 ---
 
-## 📊 Feature Comparison Matrix
+## 📊 Feature Comparison Matrix 📋
 
-| Tool / Platform | License | Category | Test-Aware | Distributed Tracing | Self-Hosted | Primary Focus & Diagnostic Strengths |
-|-----------------|---------|----------|:----------:|:-------------------:|:-----------:|---------------------------------------|
-| **BrowserStack** | Proprietary | Test Session Telemetry | ✅ | ✅ (Jaeger) | ❌ | Selenium 4 session trace capture & consolidated test logs |
-| **Datadog Synthetics** | Proprietary | Synthetic Monitoring + APM | (Correlation) | ✅ (APM) | ❌ | Synthetic-to-backend trace linking & private runners |
-| **New Relic Synthetics** | Proprietary | Scripted Browser Monitors | (Queue Metrics) | ❌ | ❌ | Runner queue metrics & execution diagnostics |
-| **Dynatrace Synthetics** | Proprietary | Browser/HTTP/Network | (Waterfalls) | ✅ | ❌ | Digital experience & waterfall timing analysis |
-| **Catchpoint** | Proprietary | Synthetic Monitoring + RUM | (Pre-prod) | (Network) | ❌ | Pre-production testing & global network vantage points |
-| **ThousandEyes** | Proprietary | Network Intelligence | ❌ | (Path) | ❌ | Internet routing path & environment connectivity |
-| **SpeedCurve** | Proprietary | Web Performance Benchmarking | (Frontend) | ❌ | ❌ | Clean-cache front-end speed & Core Web Vitals |
-| **OpenObserve** | AGPL-3.0 | Unified Observability Backend | (Via OTLP) | ✅ | ✅ | Cost-efficient logs/metrics/traces backend via OTLP |
-| **Upright** | Open Source | Synthetic Monitoring Engine | (Probes) | ❌ | ✅ | Playwright browser automation + Prometheus exporter |
-| **Jaeger** | Apache 2.0 | Distributed Tracing UI | ✅ (BrowserStack) | ✅ | ✅ | Trace timeline visualization, span analysis & DAGs |
-| **Grafana Tempo** | AGPL-3.0 | Distributed Tracing Backend | (Via OTLP) | ✅ | ✅ | Cost-effective object-storage tracing without indexing |
-| **OpenTelemetry** | Apache 2.0 | Telemetry Standard & Collector | (Standard) | ✅ | ✅ (Collector) | Vendor-neutral test instrumentation & trace routing |
+| Tool / Platform | License / Type | Test-Aware Tracing | Distributed Tracing UI | Self-Hosted Option | Primary Diagnostic Strengths |
+|---|:---:|:---:|:---:|:---:|---|
+| **Cisco ThousandEyes** | SaaS | ❌ | (Path Analysis) | ❌ | Hop-by-hop BGP/DNS network path diagnostics |
+| **Datadog Synthetics** | SaaS | (Synthetic APM) | ✅ (APM) | ❌ (Private Runners) | Synthetic-to-backend trace linking & private location runners |
+| **Dynatrace Synthetics** | SaaS | (Waterfalls) | ✅ | ❌ | Davis AI root-cause analysis & resource download waterfalls |
+| **New Relic Synthetics** | SaaS | (Queue Metrics) | ❌ | ❌ | Runner queue duration (`nr.internalQueueDuration`) telemetry |
+| **BrowserStack** | SaaS | ✅ | ✅ (Jaeger Export) | ❌ | Selenium 4 session tracing, HAR logs, video recordings |
+| **Sentry Performance** | SaaS / Self-Hosted | ✅ (Jest) | ✅ (Transactions) | ✅ | `@sentry/jest-environment` test suite execution profiling |
+| **Catchpoint** | SaaS | (Pre-prod) | (Network) | ❌ | 600+ global vantage points & pre-production test validation |
+| **SpeedCurve** | SaaS | (Frontend) | ❌ | ❌ | Noise-free EC2 hardware, clean-cache Web Vitals benchmarks |
+| **SigNoz** | Open-Source | (Via OTel) | ✅ | ✅ | Native OpenTelemetry APM with fast ClickHouse queries |
+| **Jaeger** | Open-Source | ✅ (BrowserStack) | ✅ | ✅ | CNCF graduated trace UI, DAG visualization, Badger storage |
+| **OpenObserve** | Open-Source | (Via OTLP) | ✅ | ✅ | 140x lower storage cost, native OTLP logs & traces in S3 |
+| **Highlight** | Open-Source | (Session Replay) | ✅ | ✅ | Web session replay coupled with network and trace telemetry |
+| **OpenTelemetry Collector**| Open-Source | (Telemetry Routing) | ❌ | ✅ | Standardized telemetry routing, filtering, and aggregation |
+| **Grafana Tempo** | Open-Source | (Via OTLP) | ✅ (via Grafana) | ✅ | Massive scale trace storage in object storage without indexing |
+| **Uptrace** | Open-Source | (Via OTel) | ✅ | ✅ | Distributed tracing & metrics for ClickHouse and PostgreSQL |
+| **Tracetest** | Open-Source | ✅ (Trace-based testing)| ✅ | ✅ | Automated test assertions against distributed trace span data |
+| **Upright** | Open-Source | (Probes) | ❌ | ✅ | Playwright synthetic browser automation & Prometheus alerts |
+| **Hypertrace** | Open-Source | (Via OTel) | ✅ | ✅ | Scalable trace ingestion and service flow graph visualization |
 
 ---
 
-## 🎯 Key Diagnostics & Observability Capabilities
+## 🎯 Key Diagnostics & Observability Capabilities 🔬
 
 When evaluating telemetry solutions for automated test pipelines and staging environments, look for these foundational capabilities:
 
@@ -200,38 +109,42 @@ When evaluating telemetry solutions for automated test pipelines and staging env
 2. **Queue Duration vs. Execution Duration:** Differentiates runner saturation from code performance regression.
 3. **OpenTelemetry (OTLP) Ingestion:** Ensures test frameworks can stream standardized telemetry without proprietary lock-in.
 4. **Waterfall & Network Timing:** Captures DNS resolution, TCP handshake, TLS negotiation, and resource download breakdown.
-5. **Pre-Production Baselines:** Enables automated performance regression detection in CI/CD before code merges to production.
+5. **Trace-Based Testing:** Executes automated test assertions directly against distributed trace spans and backend metadata.
+6. **Pre-Production Baselines:** Enables automated performance regression detection in CI/CD before code merges to production.
 
 ---
 
-## 📈 Star History
+## 💖 Support & Community 🙏
 
-[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Test-Observability-Pipeline-Analytics&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Test-Observability-Pipeline-Analytics&type=date&legend=top-left)
+Thank you for visiting this curated directory! If this guide helped improve your test automation strategy, observability stack, or pipeline efficiency:
 
----
-
-## 💖 Support & Community
-
-If this guide helped optimize your test environment diagnostics, telemetry pipelines, or test execution reliability:
-
-- ⭐ **Star this repository** to support development and help fellow QA/DevOps practitioners find it.
-- 🍴 **Fork the repo** to contribute tool evaluations, architectural diagrams, or configuration snippets.
-- 💬 **Join the Discussion:** Join our developer community on [Discord](https://discord.gg/jc4xtF58Ve) to discuss TestOps and observability.
-- ☕ **Sponsor this Project:** Support ongoing maintenance via [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+- ⭐ **Star this repository** to help other engineers discover modern TestOps solutions.
+- 🍴 **Fork the repository** to contribute new benchmarks, platform features, or open-source tools.
+- 📢 **Share with your team** on LinkedIn, X/Twitter, or developer Discord communities.
+- ☕ **Buy a coffee & sponsor ongoing research:**  
+  [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-%E2%99%A5-ea4aaa?style=for-the-badge&logo=github)](https://github.com/sponsors/ishandutta2007)  
+  Support directly through the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007)! Every contribution is deeply appreciated.
 
 ---
 
-## 🤝 Contributing
+## 📈 Star History 🌟
 
-Contributions are warmly welcome! If you know of an open-source or commercial Test Environment Diagnostics or Telemetry tool that belongs here, please submit a pull request:
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Test-Environment-Diagnostics-Telemetry&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Test-Environment-Diagnostics-Telemetry&type=date&legend=top-left)
+
+---
+
+## 🤝 Contributing 👥
+
+Contributions are always welcome! If you know of an open-source or commercial Test Environment Diagnostics or Telemetry tool that belongs here, please submit a pull request:
 
 1. Fork this repository.
-2. Add your entry to the appropriate section in alphabetical order.
-3. Include project name, homepage link, stack, license, and key diagnostic capabilities.
-4. Open a Pull Request with a clear explanation of why the tool is beneficial to test observability.
+2. Verify that the project is actively maintained (active releases or commits within the last 12 months).
+3. If adding an open-source tool, ensure it includes an official GitHub star badge formatted as `[![Repo Stars](https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white)](https://github.com/<owner>/<repo>/stargazers)` and placed in descending order of star counts.
+4. If adding a SaaS product, provide exact starting price tiers, free tier or trial duration parameters, and company scale metrics.
+5. Submit a descriptive Pull Request.
 
 ---
 
-## 📄 License
+## 📄 License ⚖️
 
-This repository and curated list are released under [CC0 1.0 Universal (Public Domain)](http://creativecommons.org/publicdomain/zero/1.0/). Project names and software logos remain the property of their respective owners.
+This repository is curated and made available under the [CC0 1.0 Universal (Public Domain)](http://creativecommons.org/publicdomain/zero/1.0/) license. Individual tools, libraries, and frameworks retain their respective open-source or proprietary licenses.
