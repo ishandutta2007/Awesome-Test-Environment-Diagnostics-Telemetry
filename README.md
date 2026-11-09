@@ -59,9 +59,9 @@ Commercial cloud-hosted test analytics, environment diagnostics, and synthetic m
 
 ## 💻 Open-Source Software & Test Diagnostics Engines 🛠️
 
-Self-hosted, community-driven platforms for test observability, synthetic test execution, and distributed trace analysis. Sorted in descending order of official GitHub star counts.
+Self-hosted, community-driven platforms for test observability, synthetic test execution, and distributed trace analysis. Sorted in descending order of official GitHub Stars_Counts.
 
-| 📦 Open-Source Project | ⭐ GitHub Stars | 🛠️ Technology Stack | 📜 License | 🔍 Key Diagnostic Capabilities | 🎯 Best For |
+| 📦 Open-Source Project | ⭐ GitHub_Stars | 🛠️ Technology Stack | 📜 License | 🔍 Key Diagnostic Capabilities | 🎯 Best For |
 |---|---|---|---|---|---|
 | **[SigNoz](https://github.com/signoz/signoz)** | [![Repo Stars](https://img.shields.io/github/stars/signoz/signoz?style=social&color=white)](https://github.com/signoz/signoz/stargazers) | Go, TypeScript, ClickHouse, OTel | Apache 2.0 | Native OpenTelemetry APM, ClickHouse-backed trace aggregation, service dependency maps | Self-hosted full-stack APM & test trace correlation with fast ClickHouse analytics |
 | **[Jaeger](https://github.com/jaegertracing/jaeger)** | [![Repo Stars](https://img.shields.io/github/stars/jaegertracing/jaeger?style=social&color=white)](https://github.com/jaegertracing/jaeger/stargazers) | Go, Cassandra, Elasticsearch, Badger | Apache 2.0 | CNCF Graduated tracing backend, span lifecycle DAGs, BrowserStack Selenium 4 telemetry import | Visualizing Selenium 4 session traces and microservice spans in a proven UI |
@@ -139,7 +139,7 @@ Contributions are always welcome! If you know of an open-source or commercial Te
 
 1. Fork this repository.
 2. Verify that the project is actively maintained (active releases or commits within the last 12 months).
-3. If adding an open-source tool, ensure it includes an official GitHub star badge formatted as `[![Repo Stars](https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white)](https://github.com/<owner>/<repo>/stargazers)` and placed in descending order of star counts.
+3. If adding an open-source tool, ensure it includes an official GitHub Stars_Badge formatted as `[![Repo Stars](https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white)](https://github.com/<owner>/<repo>/stargazers)` and placed in descending order of Stars_Counts.
 4. If adding a SaaS product, provide exact starting price tiers, free tier or trial duration parameters, and company scale metrics.
 5. Submit a descriptive Pull Request.
 
